@@ -1,0 +1,19 @@
+import googlemaps
+
+# Set up the API client
+gmaps = googlemaps.Client(key='YOUR_API_KEY')
+
+# Search for a location
+results = gmaps.geocode('India')
+location = results[0]['geometry']['location']
+
+# Get the traffic data for the location
+traffic_data = gmaps.traffic_matrix(location['lat'], location['lng'])
+
+# Print the traffic data
+print(traffic_data)- 
+
+<!---
+DMAX1011/DMAX1011 is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+You can click the Preview link to take a look at your changes.
+--->
